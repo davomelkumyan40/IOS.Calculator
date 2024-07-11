@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IOS.Calculator.CalculatorView">
+    <Grid RowDefinitions="*, Auto" ColumnDefinitions="*" Padding="10,0,10,25">
+        <Grid x:Name="lableGrid" Grid.Row="0" RowDefinitions="107" ColumnDefinitions="*" VerticalOptions="End" HorizontalOptions="End" Padding="10,0,10,15">
+            <Label x:Name="input" Text="0" FontSize="77" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="White" FontFamily="SFPRO-Thin" FontAttributes="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*,*,*">
+            <Button x:Name="cancellBtn" Clicked="Button_Clicked" Grid.Column="0" Grid.Row="0" Text="AC" FontFamily="SFPRO-Regular" BackgroundColor="{StaticResource Secondary}" TextColor="Black"/>
+            <Button Clicked="Button_Clicked" Grid.Column="1" Grid.Row="0" FontSize="1" Text="-/+" Padding="14,0,0,0" ImageSource="plus_minus" BackgroundColor="{StaticResource Secondary}" TextColor="Black"/>
+            <Button Clicked="Button_Clicked" Grid.Column="2" Grid.Row="0" Text="%" FontAttributes="Bold" BackgroundColor="{StaticResource Secondary}" TextColor="Black"/>
+            <Button Clicked="Button_Clicked" Grid.Column="3" Grid.Row="0" Text="÷" FontSize="40" Padding="0,0,0,3" FontAttributes="Bold" BackgroundColor="{StaticResource Primary}"/>
+
+            <Button Clicked="Button_Clicked" Grid.Column="0" Grid.Row="1" Text="7" />
+            <Button Clicked="Button_Clicked" Grid.Column="1" Grid.Row="1" Text="8"/>
+            <Button Clicked="Button_Clicked" Grid.Column="2" Grid.Row="1" Text="9"/>
+            <Button Clicked="Button_Clicked" Grid.Column="3" Grid.Row="1" FontSize="1" Padding="10,0,0,0" Text="x" ImageSource="mult" FontAttributes="Bold" BackgroundColor="{StaticResource Primary}"/>
+
+            <Button Clicked="Button_Clicked" Grid.Column="0" Grid.Row="2" Text="4"/>
+            <Button Clicked="Button_Clicked" Grid.Column="1" Grid.Row="2" Text="5"/>
+            <Button Clicked="Button_Clicked" Grid.Column="2" Grid.Row="2" Text="6"/>
+            <Button Clicked="Button_Clicked" Grid.Column="3" Grid.Row="2" FontSize="1" Padding="10,0,0,0" Text="-" ImageSource="minus" BackgroundColor="{StaticResource Primary}"/>
+
+            <Button Clicked="Button_Clicked" Grid.Column="0" Grid.Row="3" Text="1"/>
+            <Button Clicked="Button_Clicked" Grid.Column="1" Grid.Row="3" Text="2"/>
+            <Button Clicked="Button_Clicked" Grid.Column="2" Grid.Row="3" Text="3"/>
+            <Button Clicked="Button_Clicked" Grid.Column="3" Grid.Row="3" Text="+" FontSize="40" Padding="0,0,0,3" FontAttributes="Bold" BackgroundColor="{StaticResource Primary}"/>
+
+            <Button Clicked="Button_Clicked" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Text="0         " WidthRequest="190"/>
+            <Button Clicked="Button_Clicked" Grid.Column="2" Grid.Row="4" Text=","/>
+            <Button Clicked="Button_Clicked" Grid.Column="3" Grid.Row="4" Text="=" FontSize="40" Padding="0,0,0,3" FontAttributes="Bold" BackgroundColor="{StaticResource Primary}"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
